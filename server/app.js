@@ -17,19 +17,19 @@ SocketIO.on("connection", (socket) => {
   socket.on("move", (data) => {
     switch (data) {
       case "left":
-        position.x -= 5;
+        position.x -= 25;
         SocketIO.emit("position", position);
         break;
       case "right":
-        position.x += 5;
+        position.x += 25;
         SocketIO.emit("position", position);
         break;
       case "up":
-        position.y -= 5;
+        position.y -= 25;
         SocketIO.emit("position", position);
         break;
       case "down":
-        position.y += 5;
+        position.y += 25;
         SocketIO.emit("position", position);
         break;
     }
